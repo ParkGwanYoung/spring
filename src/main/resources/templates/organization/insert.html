@@ -1,0 +1,28 @@
+<html xmlns:th="https://thymeleaf.org">
+
+<head>
+    <script src="../../static/css/jquery.min.js" th:src="@{/css/jqeury.min.js}"></script>
+    <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+
+<body>
+    <form th:action = @{/organization/read/}>
+        <div class="form-group row">
+            <div class="form-control col">ID : <input type="text" class="form-control col"></div>
+        </div>
+        <div class="form-group row">
+            <div class="form-control col">Name : <input type="text" class="form-control col"></div>
+        </div>
+        <div class="form-group row">
+            <div class="form-control col">Hobby : <input type="text" class="form-control col"></div>
+        </div>
+        <div class="form_group row">
+            <input type="submit" class="form-control col" value="submit">
+        </div>
+    </form>
+
+
+</body>
+
+</html>
