@@ -19,7 +19,7 @@ public class CommonCodeController{
         //아래 서버가 클라이언트로 응답하기 위한 문법
         String viewName = "/commonCode/";
         Map<String,Object> resultMap = new HashMap<String,Object>();
-        if("edit".equals(action)){
+        if("read".equals(action)){
             viewName = viewName + action;
             resultMap = paramMap;
         }
@@ -30,7 +30,7 @@ public class CommonCodeController{
     }
 
     
-    @RequestMapping(value = "/commonCode/insert")
+    @RequestMapping(value = "/commonCode/edit")
     public void actionmethod(){
     }
 }
