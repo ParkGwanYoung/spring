@@ -1,18 +1,23 @@
 <html xmlns:th="https://thymeleaf.org">
 
 <head>
-    <script src="../static/css/jquery.min.js" th:src="@{/css/jqeury.min.js}"></script>
-    <script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
-
-
+    <script src="../../static/css/jquery.min.js" th:src="@{/css/jqeury.min.js}"></script>
+    <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 
 </head>
 
 <body>
-    <a href="./member/signIn.html" th:href="@{/member/signIn}">signIn</a><br>
-    <a href="./member/signOut.html" th:href="@{/member/signOut}">signOut</a><br>
-    <a href="./member/signUp.html" th:href="@{/member/signUp}">signUP</a><br>
-    <a href="./board/mainboard.html" th:href="@{/board/mainboard}">Main Board</a><br>
+    <form th:action = "@{/edit}">
+        <div class="form-group row">
+            <div class="form-control col">ID : <input type="text" name="ORGANIZATION_SEQ" class="form-control col"></div>
+        </div>
+        <div class="form-group row">
+            <div class="form-control col">Name : <input type="text" name="NAME" class="form-control col"></div>
+        </div>
+        <div class="form_group row">
+            <input type="submit" class="form-control col" value="submit">
+        </div>
+    </form>
 </body>
 
 </html>
