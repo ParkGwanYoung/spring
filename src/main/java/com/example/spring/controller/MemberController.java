@@ -23,5 +23,3 @@ public class MemberController{
     // @RequestMapping(value = "/member/signUp")
     // public void member_signUp() {
     // }
-
-}
