@@ -24,11 +24,7 @@ public class ListController{
        
         if("list".equals(action)){
             viewName = viewName + action;
-            Map<String,Object> data01 = new HashMap<String,Object>();
-            data01.put("NAME", "name 01");
-            data01.put("COMMON_CODE_ID","490423423165457");
-            data01.put("DESCRIPTION","anything DESCRIPTION 01");
-            resultList.add(data01);
+            resultList.add(paramList);
         }
         modelandView.setViewName(viewName);
         modelandView.addObject("resultList", resultList);
