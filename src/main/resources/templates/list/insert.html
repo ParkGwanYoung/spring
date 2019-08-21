@@ -18,20 +18,21 @@
 
 <body>
 
-    <!-- <form th:action="@{/list/list}">
+    <form th:action="@{/list/list}">
         <div class="form-group row m-3">
-            <input type="text" name="SEARCH_VALUE" class="form-control col border border-dark" placeholder="serach"
-                th:value="${resultList[0].SEARCH_VALUE}">
-                <select>
-                    <option>제목</option>
-                    <option>실명</option>
-                    <option>만든이</option>
-                </select>
+            <input type="text" name="SEARCH_VALUE" class="form-control col border border-dark" placeholder="serach">
+
+            <select class="form-control col-2 border border-warning">
+                <option>제목</option>
+                <option>실명</option>
+                <option>만든이</option>
+            </select>
+
             <input type="submit" name="SEARCH" class="form-control col-2 btn-primary" value="검색">
         </div>
-    </form> -->
+    </form>
     <!-- ------------------------------------------- -->
-    <form th:action="@{/list/list}">
+    <!-- <form th:action="@{/list/list}">
         <div class="form-group row m-3">
             <div class="form-control col-2 border border-white">ID : </div>
             <input type="text" name="COMMON_CODE_ID" class="form-control col-8 border border-dark">
@@ -47,7 +48,7 @@
         <div class="form_group row m-3 border border-dark">
             <input type="submit" class="form-control col" value="submit">
         </div>
-    </form>
+    </form> -->
 </body>
 
 </html>
