@@ -1,24 +1,50 @@
-
 <html xmlns:th="https://thymeleaf.org">
 
 <head>
     <script src="../../static/css/jquery.min.js" th:src="@{/css/jqeury.min.js}"></script>
     <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <form th:action = "@{/list/list}">
-        <div class="form-group row">
-            <div class="form-control col">ID : <input type="text" name="COMMON_CODE_ID" class="form-control col"></div>
+
+    <!-- <form th:action="@{/list/list}">
+        <div class="form-group row m-3">
+            <input type="text" name="SEARCH_VALUE" class="form-control col border border-dark" placeholder="serach"
+                th:value="${resultList[0].SEARCH_VALUE}">
+                <select>
+                    <option>제목</option>
+                    <option>실명</option>
+                    <option>만든이</option>
+                </select>
+            <input type="submit" name="SEARCH" class="form-control col-2 btn-primary" value="검색">
         </div>
-        <div class="form-group row">
-            <div class="form-control col">Name : <input type="text" name="NAME" class="form-control col"></div>
+    </form> -->
+    <!-- ------------------------------------------- -->
+    <form th:action="@{/list/list}">
+        <div class="form-group row m-3">
+            <div class="form-control col-2 border border-white">ID : </div>
+            <input type="text" name="COMMON_CODE_ID" class="form-control col-8 border border-dark">
         </div>
-        <div class="form-group row">
-            <div class="form-control col">DESCRIPTION : <input type="text" name="DESCRIPTION" class="form-control col"></div>
+        <div class="form-group row m-3">
+            <div class="form-control col-2 border border-white">NAME : </div>
+            <input type="text" name="NAME" class="form-control col-8 border border-dark">
         </div>
-        <div class="form_group row">
+        <div class="form-group row m-3">
+            <div class="form-control col-2 border border-white">DESCRIPTION : </div>
+            <input type="text" name="DESCRIPTION" class="form-control col-8 border border-dark">
+        </div>
+        <div class="form_group row m-3 border border-dark">
             <input type="submit" class="form-control col" value="submit">
         </div>
     </form>
