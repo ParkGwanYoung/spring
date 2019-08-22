@@ -9,21 +9,24 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="STUDENT")
-public class Student implements Serializable{
+@Table(name = "STUDENT")
+
+public class Student implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue
     private Long id;
     private String name;
     private String passportNumber;
 
-    public Student() {
-    }
-
     public Student(Long id, String name, String passportNumber) {
         this.id = id;
         this.name = name;
         this.passportNumber = passportNumber;
+    }
+
+    public Student() {
     }
 
     public Long getId() {
@@ -73,7 +76,8 @@ public class Student implements Serializable{
             return false;
         }
         Student student = (Student) o;
-        return Objects.equals(id, student.id) && Objects.equals(name, student.name) && Objects.equals(passportNumber, student.passportNumber);
+        return Objects.equals(id, student.id) && Objects.equals(name, student.name)
+                && Objects.equals(passportNumber, student.passportNumber);
     }
 
     @Override
@@ -83,11 +87,8 @@ public class Student implements Serializable{
 
     @Override
     public String toString() {
-        return "{" +
-            " id='" + getId() + "'" +
-            ", name='" + getName() + "'" +
-            ", passportNumber='" + getPassportNumber() + "'" +
-            "}";
+        return "{" + " id='" + getId() + "'" + ", name='" + getName() + "'" + ", passportNumber='" + getPassportNumber()
+                + "'" + "}";
     }
 
 }
