@@ -23,7 +23,7 @@ public class StudentController {
 
         String viewName = "/student/" + action;
         List<Object> resultList = new ArrayList<Object>();
-        resultList = (List)repository.findAll();
+        resultList = (List) repository.findAll();
         modelandView.setViewName(viewName);
         modelandView.addObject("resultList", resultList);
         return modelandView;

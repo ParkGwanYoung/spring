@@ -4,11 +4,15 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="STUDENT")
 public class Student implements Serializable{
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
     private String passportNumber;
