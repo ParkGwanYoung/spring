@@ -1,8 +1,4 @@
 
-import java.util.HashMap;
-import java.util.Map;
-
-
 @Controller
 public class MemberDaoController {
 
@@ -10,18 +6,18 @@ public class MemberDaoController {
     private MemberService service;
 
     @RequestMapping(value = "/dao/{action}")
-    public ModelAndView Map(@RequestParam Map<String, Object> paramMap,@PathVariable String action, ModelAndView modelandView){
+    public ModelAndView List(@RequestParam Map<String, Object> paramMap,@PathVariable String action, ModelAndView modelandView){
         
-        Map<String,Object> resultMap = new HashMap<String,Object>();
+        java.util.List<Object> resultList = new ArrayList<Object>();
         String viewName = "/dao/";
         
        
         if("read".equals(action)){
             viewName = viewName + action;
-            resultMap = (Map<String, Object>) service.getObject(paramMap);
+            resultList = (List<Object>) service.getObject(paramMap);
         }
         modelandView.setViewName(viewName);
-        modelandView.addObject("resultMap", resultMap);
+        modelandView.addObject("resultList", resultList);
         return modelandView;
 
     }
