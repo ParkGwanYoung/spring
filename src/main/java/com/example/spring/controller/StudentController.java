@@ -3,6 +3,7 @@ package com.example.spring.controller;
 import java.util.List;
 import java.util.Map;
 
+import com.example.spring.model.Student;
 import com.example.spring.repository.StudentRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +25,17 @@ public class StudentController {
 
         if ("list".equals(action)) {
             String viewName = "/student/" + action;
+            repository.saveAndFlush(new Student(Long.valueOf((String) paramMap.get("id")),
+                    (String) paramMap.get("name"), (String) paramMap.get("passportNumber")));
             List<Object> resultList = (List) repository.findAll();
             modelandview.setViewName(viewName);
             modelandview.addObject("resultList", resultList);
         }
 
         return modelandview;
+    }
+
+    @RequestMapping(value = "/student/insert")
+    public void actionmethod() {
     }
 }

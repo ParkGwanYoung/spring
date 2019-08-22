@@ -8,15 +8,11 @@
 
 <body>
  <table class="table">
-        <thead>
-            <th></th>
-            <th></th>
-        </thead>
         <tbody>
             <tr th:each="resultData: ${resultList}">
                 <td th:text=${resultData.id}></td>
                 <td th:text=${resultData.name}></td>
-                <td th:text=${resultData.passportnumber}></td>
+                <td th:text=${resultData.passportNumber}></td>
             </tr>
         </tbody>
     </table>
