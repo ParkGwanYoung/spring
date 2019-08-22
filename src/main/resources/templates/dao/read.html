@@ -7,8 +7,14 @@
 </head>
 
 <body>
-    <div th:text = ${resultMap.MEMBER_ID}></div>
-    <div th:text = ${resultMap.NAME}></div>
+    <div th:text = ${resultList[0].MEMBER_ID}></div>
+    <div th:text = ${resultList[0].NAME}></div>
+
+    <div th:text = ${resultList[1].MEMBER_ID}></div>
+    <div th:text = ${resultList[1].NAME}></div>
+
+    <div th:text = ${resultList[2].MEMBER_ID}></div>
+    <div th:text = ${resultList[2].NAME}></div>
 </body>
 
 </html>
