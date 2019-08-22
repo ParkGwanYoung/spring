@@ -1,0 +1,25 @@
+<html xmlns:th="https://thymeleaf.org">
+
+<head>
+    <script src="../../static/css/jquery.min.js" th:src="@{/css/jqeury.min.js}"></script>
+    <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+
+<body>
+ <table class="table">
+        <thead>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr th:each="resultData: ${resultList}">
+                <td th:text=${resultData.id}></td>
+                <td th:text=${resultData.name}></td>
+                <td th:text=${resultData.passportnumber}></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
