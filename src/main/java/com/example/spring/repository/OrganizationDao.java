@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 public class OrganizationDao{
     @Autowired
     private SqlSessionTemplate sqlSession;
-    public Object getList(String sqlMapId, Object dataMap){
-        Object result = sqlSession.selectList(sqlMapId,dataMap);
+    public Object getObject(String sqlMapId, Object dataMap){
+        Object result = sqlSession.selectOne(sqlMapId,dataMap);
         return result;
     }
 }
